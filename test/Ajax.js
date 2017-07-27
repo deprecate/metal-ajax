@@ -38,6 +38,9 @@ describe('Ajax', function() {
 		});
 
 		afterEach(function() {
+			if (!this.xhr.restore) { 
+				return;
+			}
 			this.xhr.restore();
 		});
 
@@ -196,13 +199,13 @@ describe('Ajax', function() {
 		});
 
 		it('should fail when attempting to fetch resource from cross domain', function(done) {			
+			this.xhr.restore();
 			Ajax.request('http://www.google.com')
 				.catch(function(reason) {
 					assert.ok(reason instanceof Error);
 					assert.strictEqual('CORS error', reason.message);
 					done();
 				});
-			this.requests[0].error();
 		});
 
 	});
