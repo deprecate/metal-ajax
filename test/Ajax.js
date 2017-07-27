@@ -195,6 +195,16 @@ describe('Ajax', function() {
 			this.requests[0].error();
 		});
 
+		it('should fail when attempting to fetch resource from cross domain', function(done) {			
+			Ajax.request('http://www.google.com')
+				.catch(function(reason) {
+					assert.ok(reason instanceof Error);
+					assert.strictEqual('CORS error', reason.message);
+					done();
+				});
+			this.requests[0].error();
+		});
+
 	});
 
 });
