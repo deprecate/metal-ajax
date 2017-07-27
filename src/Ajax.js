@@ -63,7 +63,11 @@ class Ajax {
 				resolve(request);
 			};
 			request.onerror = function() {
-				var error = new Error('Request error');
+				var message = 'Request error';
+				if (4 === request.readyState && !request.responseURL) {
+					message = 'CORS error';
+				} 
+				var error = new Error(message);
 				error.request = request;
 				reject(error);
 			};
