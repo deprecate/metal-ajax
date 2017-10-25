@@ -6,7 +6,7 @@ module.exports = function(config) {
 			{
 				match: 'test/data/data.json',
 				name: 'Content-Length',
-				value: 19701
+				value: 315186
 			}
 		],
 
