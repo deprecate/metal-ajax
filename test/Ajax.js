@@ -200,6 +200,8 @@ describe('Ajax', function() {
 	describe('Progress', function() {
 
 		it('should track progress of ajax request', function(done) {
+			this.timeout(30000);
+
 			const listener = sinon.stub();
 
 			Ajax.request('/base/test/data/data.json', 'get')
