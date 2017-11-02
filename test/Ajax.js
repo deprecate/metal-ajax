@@ -1,6 +1,7 @@
 'use strict';
 
 import Ajax from '../src/Ajax';
+import UA from 'metal-useragent';
 import { MultiMap } from 'metal-structs';
 
 describe('Ajax', function() {
@@ -198,6 +199,11 @@ describe('Ajax', function() {
 	});
 
 	describe('Progress', function() {
+		before(function() {
+			if (UA.isSafari && UA.matchUserAgent('Version/9')) {
+				this.skip();
+			}
+		});
 
 		it('should track progress of ajax request', function(done) {
 			this.timeout(30000);
