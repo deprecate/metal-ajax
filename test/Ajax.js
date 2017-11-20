@@ -117,7 +117,7 @@ describe('Ajax', function() {
 			Ajax.request('/url', 'get', null, headers)
 				.then(function(xhrResponse) {
 					assert.deepEqual({
-						'content-type': 'application/json'
+						'content-type': 'application/json;charset=utf-8'
 					}, xhrResponse.requestHeaders);
 					done();
 				});
@@ -131,7 +131,7 @@ describe('Ajax', function() {
 			Ajax.request('/url', 'get', null, headers)
 				.then(function(xhrResponse) {
 					assert.deepEqual({
-						'content-type': 'application/json, text/html'
+						'content-type': 'application/json, text/html;charset=utf-8'
 					}, xhrResponse.requestHeaders);
 					done();
 				});
