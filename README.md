@@ -23,6 +23,10 @@ don't have it yet.
   npm test
   ```
 
+## API
+
+See the [API.md](https://github.com/metal/metal-ajax/blob/master/API.md) file for API docs.
+
 ## Contributing
 
 Check out the [contributing guidelines](https://github.com/metal/metal-ajax/blob/master/CONTRIBUTING.md) for more information.
