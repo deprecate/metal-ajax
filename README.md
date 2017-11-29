@@ -8,17 +8,21 @@ Metal.js utility to perform Ajax requests
 
 ## Setup
 
-1. Install NodeJS >= [v0.12.0](http://nodejs.org/dist/v0.12.0/), if you don't have it yet.
+1. Install a recent release of [NodeJS](https://nodejs.org/en/download/) if you
+don't have it yet.
 
-2. Install global dependencies:
-
-  ```
-  [sudo] npm install -g gulp
-  ```
-
-3. Install local dependencies:
+2. Install local dependencies:
 
   ```
   npm install
   ```
-  
+
+3. Run the tests:
+
+  ```
+  npm test
+  ```
+
+## Contributing
+
+Check out the [contributing guidelines](https://github.com/metal/metal-ajax/blob/master/CONTRIBUTING.md) for more information.
